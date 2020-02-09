@@ -1,0 +1,257 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+header
+{
+    width: 100%;
+    height: 750px;
+    margin-top: 50px;
+}
+.container
+{
+   max-width: 1140px;
+   width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+header nav ul
+{
+    display: flex;
+    justify-content: center;
+    margin: 51px;
+    list-style: none;
+}
+
+header nav ul a
+{
+    padding: 15px 7px;
+    font-family: myriad pro;
+    font-weight: normal;
+    font-size: 18px;
+    text-decoration: none;
+color: gray;
+}
+
+header nav ul a:hover
+{
+    color: blue;
+    border-bottom: solid blue 1px;
+}
+
+.container h1
+{
+margin-top: 16px;
+font-family: myriad pro;
+font-weight: normal;
+font-size: 18px;
+color: gray;
+}
+main .container
+{
+    display: flex;
+}
+
+main
+{
+    padding: 80px 0;
+}
+
+main .left
+{
+    width: 728px;
+margin-right: 50px;
+background: #f0f0f0;
+}
+main .right
+{
+    width: 361px;
+background: #f0f0f0;
+}
+main .left h2
+{
+    margin: 52px 0 29px 0;
+    font-family: myriad pro;
+    font-weight: normal;
+    font-size: 20px;
+    color: blue;
+}
+main .left p
+{
+    font-family: myriad pro;
+    font-weight: normal;
+    font-size: 16px;
+    color: gray;
+text-align: center;
+}
+main .right h2
+{
+    margin: 52px 0 29px 0;
+    font-family: myriad pro;
+    font-weight: normal;
+    font-size: 20px;
+    color: blue;
+}
+main .right p
+{
+    font-family: myriad pro;
+    font-weight: normal;
+    font-size: 16px;
+    color: gray;
+margin: 0 auto 50px auto;
+}
+
+footer
+{
+    width: 100%;
+background: #f0f0f0;
+}
+footer .container
+{
+    display: flex;
+    justify-content: space-between;
+align-items: center;
+}
+footer .footer-logo
+{
+    width: 258;
+    height: 122;
+}
+footer .footer-info
+{
+    width: 254px;
+    height: 122;
+    font-family: myriad pro;
+    font-weight: normal;
+    font-size: 16px;
+    color: gray;
+}
+footer .footer-info span
+{
+    width: 254px;
+    height: 122;
+    font-family: myriad pro;
+    font-weight: normal;
+    font-size: 25px;
+    color: gray;
+}
+
+@media(max-width:992px)
+{
+    .header-content, .header-content img
+    {
+        width: 100%;
+    }
+    {
+
+    }
+    main .container
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .left
+    {
+        width: 100 !important%;
+    }
+    .right
+    {
+        width: 100% !important;
+    }
+    .container
+    {
+        width: 100% !important;
+    }
+}
+@media(max-width:576px)
+{
+    nav ul
+    {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: -100%;
+        width: 100%;
+        background: #00ffff;
+        transition: left 0.9s cubic-bezier(.98,.42,.18,.63);
+    }
+    #menyu
+    {
+        opacity: 0;
+    }
+    label
+    {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        width: 26px;
+        height: 26px;
+
+        cursor: pointer;
+        z-index: 2;
+    }
+    label .span-menyu, label .span-menyu::before,label .span-menyu::after
+    {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #616161;
+
+        transition-duration: 0.3s;
+    }
+    label .span-menyu::before
+    {
+        content: '';
+        top: -8px;
+    }
+    label .span-menyu::after
+    {
+        content: '';
+        top: 8px;
+    }
+    #menyu:checked~.label>.span-menyu
+    {
+        transform: rotate(45deg);
+     }
+     
+     #menyu:checked~.label>.span-menyu::before 
+     {
+        top: 0;
+        transform: rotate(0);
+     }
+     
+     #menyu:checked~.label>.span::after 
+     {
+        top: 0;
+        transform: rotate(90deg);
+     }
+     
+     #menyu:checked~ul
+     {
+        left: 0;
+     }
+     nav ul li a
+     {
+         padding-top: 10px !important;
+         padding-bottom: 10px !important;
+     }
+
+
+    footer .container
+    {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .footer-info
+    {
+        order: -1;
+        margin-bottom: 30px;
+    }

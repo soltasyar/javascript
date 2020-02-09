@@ -1,0 +1,338 @@
+@import 'fonts.css';
+
+/* =========================== ROOT SETTINGS start ======================== */
+:root {
+   --f100: 'Raleway Thin';
+   --f300: 'Raleway Light';
+   --f400: 'Raleway Regular';
+   --f700: 'Raleway Bold';
+   --f900: 'Raleway Black';
+   --fR700: 'Roboto Bold';
+   --logo: #4e9f0d;
+   --logo-border: #62be19;
+   --main-color: #69cf17;
+   --opacity-color: rgba(106, 207, 23, 0.75);
+   --opacity-color90: rgba(106, 207, 23, 0.90);
+   --black: black;
+   --grey-p: #dedede;
+   --white: #fff;
+   --grey: #7a7a7a;
+   --col-1: calc(100%/12);
+   --col-2: calc(100%/12*2);
+   --col-3: calc(100%/12*3);
+   --col-4: calc(100%/12*4);
+   --col-5: calc(100%/12*5);
+   --col-6: calc(100%/12*6);
+   --col-7: calc(100%/12*7);
+   --col-8: calc(100%/12*8);
+   --col-9: calc(100%/12*9);
+   --col-10: calc(100%/12*10);
+   --col-11: calc(100%/12*11);
+   --col-12: 100%;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-decoration: none;
+   box-sizing: border-box;
+}
+
+.container {
+   max-width: 1140px;
+   width: 100%;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0 -15px;
+}
+
+.justify-content-center {
+   justify-content: center;
+}
+
+.justify-content-between {
+   justify-content: space-between;
+}
+
+.justify-content-start {
+   justify-content: flex-start;
+}
+
+.align-items-center {
+   align-items: center;
+}
+
+.align-items-start {
+   align-items: flex-start;
+}
+
+.flex-column {
+   flex-direction: column;
+}
+
+.d-flex {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.col-4 {
+   width: var(--col-4);
+   padding: 0 15px;
+}
+
+.col-12 {
+   width: var(--col-12);
+   padding: 0 15px;
+}
+
+body {
+   background: var(--black);
+}
+
+/* ================================================ ROOT SETTINGS end ================================ */
+/* ================================================ HEADER start ================================ */
+header {
+   background: url(../images/bg_img.jpg)no-repeat center /cover;
+}
+
+.logo {
+   background: var(--logo);
+   border: 3px solid var(--logo-border);
+   border-radius: 5px;
+   color: var(--white);
+   font-family: var(--f700);
+   font-size: 24px;
+   text-transform: uppercase;
+   box-shadow: inset 0 0 5px rgba(30, 30, 30, 0.15);
+   padding: 8px 18px 7px 18px;
+}
+
+nav ul li a {
+   display: block;
+   color: var(--main-color);
+   font-family: var(--f300);
+   font-size: 20px;
+   padding: 41px 26px 34px 26px;
+}
+
+.header-link {
+   padding: 37px 11px 29px 11px;
+}
+
+nav ul li a:hover {
+   background: var(--opacity-color);
+   color: var(--white);
+}
+
+.header-link span {
+   display: inline-block;
+   width: 24px;
+   height: 24px;
+   border-radius: 50%;
+   color: var(--main-color);
+   background: var(--white);
+   text-align: center;
+
+}
+
+.header-content {
+   padding: 150px 0;
+}
+
+.header-content h1 {
+   color: var(--main-color);
+   font-family: var(--f900);
+   font-size: 72px;
+   text-transform: uppercase;
+}
+
+.header-type {
+   font-family: var(--f400);
+   color: var(--main-color);
+   font-size: 36px;
+   text-transform: uppercase;
+   margin-bottom: 30px;
+   display: block;
+}
+
+.header-content p {
+   font-family: var(--f400);
+   color: var(--grey-p);
+   font-size: 18px;
+   margin-bottom: 75px;
+}
+
+.header-price {
+   font-family: var(--f100);
+   font-size: 60px;
+   color: var(--white);
+   background: var(--opacity-color);
+   padding: 28px 90px;
+}
+
+/* ===================================== HEADER end ================================== */
+/* ===================================   MAIN start ====================================== */
+main {
+   padding: 50px 0 100px;
+}
+
+.main-link {
+   font-family: var(--f700);
+   font-size: 20px;
+   color: var(--grey);
+   margin-right: 48px;
+}
+
+.main-link:hover {
+   color: var(--main-color);
+}
+
+.active {
+   color: var(--main-color);
+}
+
+.main-ul {
+   margin-bottom: 69px;
+}
+
+.main-img {
+   position: relative;
+   display: flex;
+}
+
+.img-price {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   background: var(--opacity-color);
+   padding: 20px 58px;
+   font-family: var(--f400);
+   font-size: 24px;
+   color: var(--grey-p);
+}
+
+.link-hover {
+   display: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: var(--opacity-color90);
+   color: var(--white);
+   font-family: var(--f700);
+   font-size: 24px;
+   align-items: center;
+   justify-content: center;
+}
+
+.main-img:hover .link-hover {
+   display: flex;
+}
+
+.main-img:hover .img-price {
+   display: none;
+}
+
+.main-card h3 {
+   font-family: var(--f700);
+   font-size: 24px;
+   text-transform: uppercase;
+   color: var(--main-color);
+   margin-top: 30px;
+   margin-bottom: 14px;
+}
+
+.main-card p {
+   font-family: var(--f400);
+   font-size: 16px;
+   color: var(--grey-p);
+   line-height: 24px;
+}
+
+.main-card {
+   margin-bottom: 50px;
+}
+
+/* ====================================== MAIN end ================================== */
+/* ====================================== ARTICLE start ============================= */
+article {
+   padding: 50px 0 100px;
+   background: url(../images/article_bg.jpg)no-repeat center center /cover;
+}
+
+article h2 {
+   font-family: var(--f700);
+   font-size: 36px;
+   text-transform: uppercase;
+   color: var(--main-color);
+   text-align: center;
+}
+
+article h2::after {
+   content: '';
+   display: block;
+   width: 200px;
+   height: 1px;
+   background: var(--main-color);
+   margin: 20px auto 45px;
+}
+
+article p {
+   font-family: var(--f400);
+   font-size: 18px;
+   color: var(--grey-p);
+   line-height: 24px;
+}
+
+article p:nth-child(2) {
+   margin-bottom: 30px;
+}
+
+/* ====================================== ARTICLE end ============================= */
+/* ====================================== MAP start ============================= */
+.map h2 {
+   background: var(--white);
+   font-family: var(--f700);
+   font-size: 36px;
+   text-transform: uppercase;
+   color: var(--main-color);
+   text-align: center;
+   padding: 48px 0 55px;
+}
+
+/* ====================================== MAP end ============================= */
+/* ====================================== FOOTER start ============================= */
+footer{
+   padding: 40px 0 50px;
+}
+.footer-contact{
+   color: var(--main-color);
+   font-family: var(--fR700);
+   font-size: 24px;
+}
+footer ul li a{
+   font-family: var(--f100);
+   font-size: 18px;
+   color: var(--grey-p);
+   margin-right: 45px;
+}
+footer ul{
+   margin: 50px 0 40px;
+}
+footer ul li:nth-last-child(1) a{
+   margin-right: 0;
+}
+footer p{
+   font-family: var(--f100);
+   font-size: 16px;
+   color: var(--grey-p);
+   text-align: center;
+}
+/* ====================================== FOOTER end ============================= */
